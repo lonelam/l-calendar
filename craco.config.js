@@ -24,5 +24,14 @@ module.exports = {
         "loose": true
       }],
     ],
+  },
+  jest: {
+    babel: {
+      addPresets: true,
+      addPlugins: true
+    },
+    configure: {
+      testURL: 'https://laizn.com/calendar/'
+    }
   }
 };
