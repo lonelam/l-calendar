@@ -6,8 +6,8 @@ import { MyHomeIpService } from '../../services/my-home-ip-service';
 import { MockMyHomeIpService } from '../../test-services/mock-my-home-ip-service';
 
 beforeAll(() => {
+  rootContainer.bind('mock_ip').toConstantValue('1.1.1.1');
   rootContainer.bind(MyHomeIpService).to(MockMyHomeIpService);
-  rootContainer.get<MockMyHomeIpService>(MyHomeIpService).mockIp = '1.1.1.1';
 });
 test('render home', async () => {
   render(<Home />);
