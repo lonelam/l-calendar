@@ -1,9 +1,10 @@
-import { cleanup, findByText, render, screen } from '@testing-library/react';
+import { render, findByText } from '@testing-library/react';
+import React from 'react';
 import { act } from 'react-dom/test-utils';
-import Home from '.';
+import HomeIpContainer from '.';
 
-test('render home', async () => {
-  render(<Home />);
+test('render ip container with mock ip', async () => {
+  render(<HomeIpContainer />);
   const ipAddrNode = document.querySelector('.ip-addr');
   expect(ipAddrNode).not.toBeNull();
   await act(async () => {
