@@ -10,13 +10,16 @@ import {
 } from '@ant-design/icons';
 import './App.less';
 import PageRouter from './page-router';
+import { Config } from './config';
 
 function App() {
   return (
     <div className="App">
       <Layout>
         <Header className="app-header">
-          <div className="logo">l-calendar</div>
+          <div className="logo">
+            l-calendar{Config.isDevelopment && '[dev]'}
+          </div>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
             <Menu.Item key="1">nav 1</Menu.Item>
             <Menu.Item key="2">nav 2</Menu.Item>

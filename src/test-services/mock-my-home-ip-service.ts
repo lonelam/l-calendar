@@ -1,11 +1,7 @@
-import { inject, injectable } from 'inversify';
+import { inject } from 'inversify';
 import { MyHomeIpService } from '../services/my-home-ip-service';
 
 export class MockMyHomeIpService extends MyHomeIpService {
-  constructor() {
-    super();
-  }
-
   createTime = Date.now();
 
   @inject('mock_ip')

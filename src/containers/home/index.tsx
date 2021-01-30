@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Ninja, TYPES, Warrior } from '../../di-test';
 import { rootContainer } from '../../inversify.config';
 import { MyHomeIpService } from '../../services/my-home-ip-service';
 
