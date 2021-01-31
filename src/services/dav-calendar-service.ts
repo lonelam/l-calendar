@@ -1,3 +1,4 @@
+export const nothing = 'nothing';
 // import {
 //   Account,
 //   Calendar,
